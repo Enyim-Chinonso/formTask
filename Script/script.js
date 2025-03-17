@@ -12,44 +12,53 @@ form.addEventListener("submit", (e) => {
 
     if (firstName.value === "" || firstName.value == null) {
         alert("Please, enter your first name!");
+        return;
 }
 
     if (lastName.value === "" || lastName.value == null) {
         alert("Please, enter your last name!");
+        return;
 }
     
     if (email.value === "" || email.value == null) {
         alert("Please, enter your email address!");
+        return;
 }
 
   
 
 if (career.value === "" || career.value == null) {
     alert("Please, enter your career!");
+    return;
 }
 
 
 if (password.value === "" || password.value == null) {
     alert("Please, enter your password!");
+    return;
+
 }
 
 if (password.value.length > 20) {
     alert("Password must not be more than 20 characters");
-    e.preventDefault()
+    return;
 }
 
 if (conpass.value === "" || conpass.value == null) {
     alert("Please, confirm password!")
+    return;
 }
 
-if (conpass.value === "" || conpass.value != password.value) {
-    alert("Password does not match!")
+
+if (conpass.value !== password.value) {
+    alert("Passwords do not match!");
 } else {
-    alert("Correct password!")
+    alert("Correct password!");
 }
 
-
-
-
+alert("Form submitted successfully!");
+form.submit()
 
 });
+
+
